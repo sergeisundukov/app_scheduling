@@ -12,11 +12,11 @@ from pulp import *
 import datetime
 import ConfigParser
 
-applications = pd.read_csv(os.path.dirname(os.path.abspath(__file__)) + '\\applications.csv', sep=',', header =0)
-app_components = pd.read_csv(os.path.dirname(os.path.abspath(__file__)) + '\\app_components.csv', sep=',', header =0)
-component_cost = pd.read_csv(os.path.dirname(os.path.abspath(__file__)) + '\\component_cost.csv', sep=',', header =0)
-waves = pd.read_csv(os.path.dirname(os.path.abspath(__file__)) + '\\waves.csv', sep=',', header =0)
-fixed_apps = pd.read_csv(os.path.dirname(os.path.abspath(__file__)) + '\\fixed_apps.csv', sep=',', header =0)
+applications = pd.read_csv('applications.csv', sep=',', header =0)
+app_components = pd.read_csv('app_components.csv', sep=',', header =0)
+component_cost = pd.read_csv('component_cost.csv', sep=',', header =0)
+waves = pd.read_csv('waves.csv', sep=',', header =0)
+fixed_apps = pd.read_csv('fixed_apps.csv', sep=',', header =0)
 
 fixed_apps =  pd.merge(fixed_apps, waves, on=['wave'], how='inner')
 
